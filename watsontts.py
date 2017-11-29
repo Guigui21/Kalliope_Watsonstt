@@ -12,7 +12,6 @@ text_to_speech = TextToSpeechV1(
     username='',
     password='')
 
-
 class Watsontts(TTSModule):
     def __init__(self, **kwargs):
         super(Watsontts, self).__init__(**kwargs)
@@ -31,8 +30,13 @@ class Watsontts(TTSModule):
 
         .. raises:: FailToLoadSoundFile
         """
+
         with open(join(dirname(__file__), self.file_path),
                   'wb') as audio_file:
             audio_file.write(
-                text_to_speech.synthesize(self.words, accept='audio/wav',
-                                          voice="fr-FR_ReneeVoice"))
+                text_to_speech.synthesize(
+                    self.words, 
+                    accept='audio/wav',
+                    voice="fr-FR_ReneeVoice"
+                )
+            )
