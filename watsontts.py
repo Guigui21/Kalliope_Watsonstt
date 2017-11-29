@@ -37,5 +37,5 @@ class Watsontts(TTSModule):
         with open(join(dirname(__file__), self.file_path),
                   'wb') as audio_file:
             audio_file.write(
-                text_to_speech.synthesize('La phrase qui va être lu', accept='audio/wav',
+                text_to_speech.synthesize(self.words, accept='audio/wav',
                                           voice="fr-FR_ReneeVoice"))
