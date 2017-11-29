@@ -1,9 +1,6 @@
 # coding=utf-8
-import requests
-from kalliope.core import FileManager
 from kalliope.core.TTS.TTSModule import TTSModule, FailToLoadSoundFile
 import logging
-
 import json
 from os.path import join, dirname
 from watson_developer_cloud import TextToSpeechV1
